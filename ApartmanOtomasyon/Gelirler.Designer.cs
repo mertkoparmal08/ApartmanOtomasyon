@@ -38,6 +38,9 @@
             listBox1 = new ListBox();
             listBox2 = new ListBox();
             listBox3 = new ListBox();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
@@ -64,6 +67,7 @@
             // 
             numericUpDown1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             numericUpDown1.Location = new Point(192, 120);
+            numericUpDown1.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(128, 30);
             numericUpDown1.TabIndex = 9;
@@ -106,6 +110,7 @@
             button1.TabIndex = 3;
             button1.Text = "EKLE";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -119,42 +124,81 @@
             // 
             // listBox1
             // 
+            listBox1.ForeColor = Color.Green;
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(72, 296);
+            listBox1.Location = new Point(208, 288);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(150, 184);
+            listBox1.Size = new Size(88, 184);
             listBox1.TabIndex = 3;
             // 
             // listBox2
             // 
+            listBox2.ForeColor = Color.Green;
             listBox2.FormattingEnabled = true;
-            listBox2.Location = new Point(232, 296);
+            listBox2.Location = new Point(304, 288);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(150, 184);
+            listBox2.Size = new Size(64, 184);
             listBox2.TabIndex = 4;
             // 
             // listBox3
             // 
+            listBox3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            listBox3.ForeColor = Color.Green;
             listBox3.FormattingEnabled = true;
-            listBox3.Location = new Point(392, 296);
+            listBox3.Location = new Point(376, 288);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(256, 184);
+            listBox3.Size = new Size(104, 184);
             listBox3.TabIndex = 5;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label3.Location = new Point(216, 272);
+            label3.Name = "label3";
+            label3.Size = new Size(72, 21);
+            label3.TabIndex = 6;
+            label3.Text = "Daire No";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Sitka Text", 9F);
+            label4.Location = new Point(312, 272);
+            label4.Name = "label4";
+            label4.Size = new Size(49, 21);
+            label4.TabIndex = 7;
+            label4.Text = "Tutar";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Sitka Text", 9F);
+            label5.Location = new Point(384, 272);
+            label5.Name = "label5";
+            label5.Size = new Size(47, 21);
+            label5.TabIndex = 8;
+            label5.Text = "Tarih";
             // 
             // Gelirler
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(732, 503);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(listBox3);
             Controls.Add(listBox2);
             Controls.Add(listBox1);
             Controls.Add(groupBox1);
             Name = "Gelirler";
             Text = "Gelirler";
+            Load += Gelirler_Load;
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -169,5 +213,8 @@
         private ListBox listBox1;
         private ListBox listBox2;
         private ListBox listBox3;
+        private Label label3;
+        private Label label4;
+        private Label label5;
     }
 }

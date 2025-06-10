@@ -32,14 +32,17 @@
             listBox2 = new ListBox();
             listBox1 = new ListBox();
             groupBox1 = new GroupBox();
+            checkBox4 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
             numericUpDown1 = new NumericUpDown();
             dateTimePicker1 = new DateTimePicker();
             label2 = new Label();
             button1 = new Button();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox4 = new CheckBox();
+            label1 = new Label();
+            label3 = new Label();
+            label4 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
@@ -47,26 +50,25 @@
             // listBox3
             // 
             listBox3.FormattingEnabled = true;
-            listBox3.Location = new Point(384, 280);
+            listBox3.Location = new Point(464, 288);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(256, 184);
+            listBox3.Size = new Size(176, 184);
             listBox3.TabIndex = 9;
-            listBox3.SelectedIndexChanged += listBox3_SelectedIndexChanged;
             // 
             // listBox2
             // 
             listBox2.FormattingEnabled = true;
-            listBox2.Location = new Point(224, 280);
+            listBox2.Location = new Point(320, 288);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(150, 184);
+            listBox2.Size = new Size(134, 184);
             listBox2.TabIndex = 8;
             // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(64, 280);
+            listBox1.Location = new Point(120, 288);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(150, 184);
+            listBox1.Size = new Size(192, 184);
             listBox1.TabIndex = 7;
             // 
             // groupBox1
@@ -89,10 +91,51 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Yeni Gider Ekle";
             // 
+            // checkBox4
+            // 
+            checkBox4.AutoSize = true;
+            checkBox4.Location = new Point(80, 168);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(125, 35);
+            checkBox4.TabIndex = 13;
+            checkBox4.Text = "Temizlik";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(80, 128);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(121, 35);
+            checkBox3.TabIndex = 12;
+            checkBox3.Text = "Asansör";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(80, 88);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(63, 35);
+            checkBox2.TabIndex = 11;
+            checkBox2.Text = "Su";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(80, 48);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(118, 35);
+            checkBox1.TabIndex = 10;
+            checkBox1.Text = "Elektrik";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
             // numericUpDown1
             // 
             numericUpDown1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             numericUpDown1.Location = new Point(384, 56);
+            numericUpDown1.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(128, 30);
             numericUpDown1.TabIndex = 9;
@@ -126,62 +169,58 @@
             button1.TabIndex = 3;
             button1.Text = "EKLE";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // checkBox1
+            // label1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(80, 48);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(118, 35);
-            checkBox1.TabIndex = 10;
-            checkBox1.Text = "Elektrik";
-            checkBox1.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("MV Boli", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(128, 272);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 23);
+            label1.TabIndex = 10;
+            label1.Text = "Gider";
             // 
-            // checkBox2
+            // label3
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(80, 88);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(63, 35);
-            checkBox2.TabIndex = 11;
-            checkBox2.Text = "Su";
-            checkBox2.UseVisualStyleBackColor = true;
+            label3.AutoSize = true;
+            label3.Font = new Font("MV Boli", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(328, 272);
+            label3.Name = "label3";
+            label3.Size = new Size(64, 23);
+            label3.TabIndex = 11;
+            label3.Text = "Tutar";
             // 
-            // checkBox3
+            // label4
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(80, 128);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(121, 35);
-            checkBox3.TabIndex = 12;
-            checkBox3.Text = "Asansör";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(80, 168);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(125, 35);
-            checkBox4.TabIndex = 13;
-            checkBox4.Text = "Temizlik";
-            checkBox4.UseVisualStyleBackColor = true;
+            label4.AutoSize = true;
+            label4.Font = new Font("MV Boli", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(472, 272);
+            label4.Name = "label4";
+            label4.Size = new Size(59, 23);
+            label4.TabIndex = 12;
+            label4.Text = "Tarih";
             // 
             // Giderler
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(732, 503);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label1);
             Controls.Add(listBox3);
             Controls.Add(listBox2);
             Controls.Add(listBox1);
             Controls.Add(groupBox1);
             Name = "Giderler";
             Text = "Giderler";
+            Load += Giderler_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -198,5 +237,8 @@
         private CheckBox checkBox4;
         private CheckBox checkBox3;
         private CheckBox checkBox2;
+        private Label label1;
+        private Label label3;
+        private Label label4;
     }
 }

@@ -43,6 +43,7 @@
             giderler.TabIndex = 3;
             giderler.Text = "Giderler";
             giderler.UseVisualStyleBackColor = true;
+            giderler.Click += giderler_Click;
             // 
             // gelirler
             // 
@@ -53,6 +54,7 @@
             gelirler.TabIndex = 2;
             gelirler.Text = "Gelirler";
             gelirler.UseVisualStyleBackColor = true;
+            gelirler.Click += gelirler_Click;
             // 
             // label1
             // 
